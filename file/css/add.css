@@ -1,0 +1,438 @@
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    color: #000000;
+}
+
+.datagrid table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+}
+
+.datagrid {
+    font: normal 12px/150% Arial, Helvetica, sans-serif;
+    background: #fff;
+    overflow: hidden;
+    border: 1px solid #006699;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.datagrid table td, .datagrid table th {
+    padding: 3px 10px;
+}
+
+.datagrid table thead th {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F));
+    background: -moz-linear-gradient(center top, #006699 5%, #00557F 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');
+    background-color: #006699;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    border-left: 1px solid #0070A8;
+}
+
+.datagrid table thead th:first-child {
+    border: none;
+}
+
+.datagrid table tbody td {
+    color: #00557F;
+    border-left: 1px solid #E1EEF4;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.datagrid table tbody .alt td {
+    background: #E1EEf4;
+    color: #00557F;
+}
+
+.datagrid table tbody td:first-child {
+    border-left: none;
+}
+
+.datagrid table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.datagrid table tfoot td div {
+    border-top: 1px solid #006699;
+    background: #E1EEf4;
+}
+
+.datagrid table tfoot td {
+    padding: 0;
+    font-size: 20px
+}
+
+.datagrid table tfoot td div {
+    padding: 2px;
+}
+
+.datagrid table tfoot td ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
+
+.datagrid table tfoot li {
+    display: inline;
+}
+
+.datagrid table tfoot li a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 8px;
+    margin: 1px;
+    color: #FFFFFF;
+    border: 1px solid #006699;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F));
+    background: -moz-linear-gradient(center top, #006699 5%, #00557F 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');
+    background-color: #006699;
+}
+
+.datagrid table tfoot ul.active, .datagrid table tfoot ul a:hover {
+    text-decoration: none;
+    border-color: #00557F;
+    color: #FFFFFF;
+    background: none;
+    background-color: #006699;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover, a:focus, a:active {
+    color: inherit;
+}
+
+.navbar-static-top {
+    margin: 0;
+    border: 0;
+    color: #fff;
+}
+
+.navbar-top {
+    background: #115c9b;
+    font-size: 12px;
+    padding: 3px 0;
+}
+
+.navbar-top .list-inline {
+    margin-bottom: 0;
+}
+
+.navbar-top .header-contact li {
+    margin-right: 15px;
+}
+
+.navbar-top .header-contact li .fa {
+    margin-right: 5px;
+}
+
+.footer-top {
+    background: #115c9b;
+    height: 40px;
+}
+
+.main-footer {
+    background: #1f76bd;
+    color: #fff;
+}
+
+.main-footer p {
+    font-size: 15px;
+    color: black;
+}
+
+.main-footer .footer-main {
+    padding: 30px 0;
+}
+
+.main-footer .footer-title {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.main-footer .footer-title .title-under {
+    background: #fff;
+    margin: 15px 0;
+
+}
+
+.main-footer .footer-title .title-under:after {
+    margin: 0;
+    background: #fff;
+}
+
+.main-footer .footer-content {
+    text-align: justify;
+    font-size: 13px;
+}
+
+.main-footer .tweet {
+    font-size: 13px;
+}
+
+.main-footer .tweet:after {
+    content: "";
+    height: 1px;
+    display: block;
+    background: #115c9b;
+    width: 150px;
+    margin: 15px auto;
+}
+
+.main-footer .tweet:last-child:after {
+    display: none;
+}
+
+.footer-bottom {
+    background: #115c9b;
+    padding: 3px;
+}
+
+.footer-form .form-group {
+    margin-bottom: 5px;
+}
+
+.footer-form .form-control {
+    background: #115c9b;
+    color: #fff;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 5px;
+    border: 1px solid #fff;
+    resize: none;
+}
+
+.footer-form .btn-submit {
+    border-radius: 0;
+    background: #115c9b;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    -moz-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    -webkit-transition: all, 0.5s;
+    transition: all, 0.5s;
+}
+
+.footer-form .btn-submit:hover {
+    background: #fff;
+}
+
+.footer-form input:-moz-placeholder,
+.footer-form textarea:-moz-placeholder {
+    color: #fff;
+}
+
+.footer-form input::-moz-placeholder,
+.footer-form textarea::-moz-placeholder {
+    color: #fff;
+}
+
+.footer-form input:-ms-input-placeholder,
+.footer-form textarea:-ms-input-placeholder {
+    color: #fff;
+}
+
+.footer-form input::-webkit-input-placeholder,
+.footer-form textarea::-webkit-input-placeholder {
+    color: #fff;
+}
+
+/* Ultimate Drop Down v1.0
+Project URL: http://www.dynamicdrive.com/style/csslibrary/item/ultimate_drop_down/
+*/
+
+.ultimatedropdown {
+    font: bold 16px 'Bitter', sans-serif;
+    background: #0066CC;
+    position: relative;
+    width: 100%;
+}
+
+/* Top Level Menu */
+.ultimatedropdown ul {
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    list-style: none;
+    right: -80px;
+}
+
+/* Top level list items */
+.ultimatedropdown ul li {
+    position: relative;
+    display: inline;
+    float: left;
+}
+
+/* Top level menu items link style */
+.ultimatedropdown ul li a, .ultimatedropdown ul li span {
+    display: block;
+    position: relative;
+    /* background of menu items (default state) */
+    background: #0066CC;
+    color: white;
+    padding: 14px 10px;
+    border-right: 1px solid #0066CC;
+    color: #0066CC;
+    text-decoration: none;
+}
+
+.ultimatedropdown ul li a:link, .ultimatedropdown ul li a:visited {
+    color: white;
+}
+
+/* Top level menu items link style on hover and when active */
+.ultimatedropdown ul li:hover > a {
+    background: #0066CC;
+}
+
+/* Sub ULs style */
+.ultimatedropdown ul li ul {
+    position: absolute;
+    left: -5000px;
+    top: auto;
+    opacity: 0;
+    width: 170px;
+    visibility: hidden;
+    box-shadow: 2px 2px 5px gray;
+    -webkit-transition: opacity .3s, visibility 0s .3s, left 0s .3s;
+    transition: opacity .3s, visibility 0s .3s, left 0s .3s;
+}
+
+/* First Sub Levels UL style on hover */
+.ultimatedropdown ul li:hover > ul {
+    visibility: visible;
+    left: 0;
+    opacity: 1;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+/* Sub level Menu list items (alters style from Top level List Items) */
+.ultimatedropdown ul li ul li {
+    display: list-item;
+    float: none;
+}
+
+/* 2nd and beyond Sub Levels vertical offset after 1st level sub menu */
+.ultimatedropdown ul li ul li ul {
+    top: 0;
+    left: 100%;
+}
+
+/* Sub Levels link style on hover and when active */
+.ultimatedropdown ul ul li:hover > a {
+    background: #0066CC;
+}
+
+/* Sub Levels UL style on hover */
+.ultimatedropdown ul ul li:hover > ul {
+    left: 100%;
+}
+
+/* Sub level menu links style */
+.ultimatedropdown ul li ul li a {
+    font: normal 14px 'Bitter', sans-serif;
+    padding: 10px;
+    margin: 0;
+    background: #0066CC;
+    border-right: none;
+    border-top-width: 0;
+    border-bottom: 1px solid #0066CC;
+}
+
+/* LIs with a sub UL style */
+.ultimatedropdown ul li > a {
+    /* add padding to accomodate arrow inside LIs */
+    padding-right: 25px;
+}
+
+/* LIs with NO sub UL style */
+.ultimatedropdown ul li > a:only-child {
+    /* undo padding for non submenu LIs */
+    padding-right: 10px;
+}
+
+/* LIs with a sub UL pseudo class */
+.ultimatedropdown ul li > a:after {
+    /* add arrow inside LIs */
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: 5px solid transparent;
+    border-top-color: #0066CC;
+    top: 50%;
+    right: 8px;
+}
+
+/* LIs with NO sub UL pseudo class */
+.ultimatedropdown ul li > a:only-child:after {
+    /* undo arrow for non submenu LIs */
+    display: none;
+}
+
+/* Sub ULs' LIs with a sub UL pseudo class */
+.ultimatedropdown ul li ul li > a:after {
+    /* change arrow to right arrow inside sub UL LIs */
+    border-top-color: #0066CC;
+    border-left-color: #0066CC;
+    top: 40%;
+    right: 8px;
+}
+
+/* ####### responsive layout CSS ####### */
+
+@media (max-width: 800px) {
+    /* FIRST breaking point
+      Last two top menu items' sub ULs should drop to the left (instead of right)
+      Change 2 to a different number to exclude/include more top menu items based on menu and max-width setting above
+    */
+    .ultimatedropdown ul li:nth-last-of-type(-n+2) ul li:hover > ul {
+        left: -100%;
+    }
+}
+
+@media (max-width: 500px) {
+    /* SECOND breaking point
+      For mobile and screen browser windows
+      Get Sub ULs to expand entire width of document and drop down
+      Changes menu reveal type from "visibility" to "display" to overcome bug. See comments below
+    */
+    .ultimatedropdown ul li {
+        position: static;
+    }
+
+    .ultimatedropdown ul li ul {
+        width: 100%;
+        border-top: 2px solid #0066CC;
+        /* change menu reveal type from "visibility" to "display". Former seems to cause browser to jump to top of page sometimes when menu header is tapped on */
+        display: none;
+    }
+
+    .ultimatedropdown ul li:hover > ul {
+        display: block;
+        left: 0 !important;
+        top: auto;
+    }
+
+    .ultimatedropdown ul ul li:hover > ul {
+        left: 0 !important;
+        top: auto;
+    }
+}

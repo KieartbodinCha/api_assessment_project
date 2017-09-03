@@ -1,0 +1,463 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    height: 100vh;
+    background-size: cover;
+}
+
+.login {
+    border-radius: 2px 2px 5px 5px;
+    padding: 10px 20px 20px 20px;
+    width: 90%;
+    max-width: 320px;
+    background: #ffffff;
+    position: relative;
+    padding-bottom: 80px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.login.loading button {
+    max-height: 100%;
+    padding-top: 50px;
+}
+
+.login.loading button .spinner {
+    opacity: 1;
+    top: 40%;
+}
+
+.login.ok button {
+    background-color: #8bc34a;
+}
+
+.login.ok button .spinner {
+    border-radius: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    height: 20px;
+    animation: none;
+    transform: rotateZ(-45deg);
+}
+
+.login input {
+    display: block;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    transition: border-width 0.2s ease;
+    border-radius: 2px;
+    color: #ccc;
+}
+
+.login input + i.fa {
+    color: #fff;
+    font-size: 1em;
+    position: absolute;
+    margin-top: -47px;
+    opacity: 0;
+    left: 0;
+    transition: all 0.1s ease-in;
+}
+
+.login input:focus {
+    outline: none;
+    color: #444;
+    border-color: #2196F3;
+    border-left-width: 35px;
+}
+
+.login input:focus + i.fa {
+    opacity: 1;
+    left: 30px;
+    transition: all 0.25s ease-out;
+}
+
+.login a {
+    font-size: 0.8em;
+    color: #2196F3;
+    text-decoration: none;
+}
+
+.login .title {
+    color: #444;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0 30px 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.login button {
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px;
+    background: #2196F3;
+    color: #fff;
+    display: block;
+    border: none;
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-height: 60px;
+    border: 0px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 2px 2px;
+    transform: rotateZ(0deg);
+    transition: all 0.1s ease-out;
+    border-bottom-width: 7px;
+}
+
+.login button .spinner {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border: 4px solid #ffffff;
+    border-top-color: rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    left: 50%;
+    top: 0;
+    opacity: 0;
+    margin-left: -20px;
+    margin-top: -20px;
+    animation: spinner 0.6s infinite linear;
+    transition: top 0.3s 0.3s ease, opacity 0.3s 0.3s ease, border-radius 0.3s ease;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.login:not(.loading) button:hover {
+    box-shadow: 0px 1px 3px #2196F3;
+}
+
+.login:not(.loading) button:focus {
+    border-bottom-width: 4px;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover, a:focus, a:active {
+    color: inherit;
+}
+
+.navbar-static-top {
+    margin: 0;
+    border: 0;
+    color: #fff;
+}
+
+.navbar-top {
+    background: #115c9b;
+    font-size: 12px;
+    padding: 3px 0;
+}
+
+.navbar-top .list-inline {
+    margin-bottom: 0;
+}
+
+.navbar-top .header-contact li {
+    margin-right: 15px;
+}
+
+.navbar-top .header-contact li .fa {
+    margin-right: 5px;
+}
+
+.footer-top {
+    background: #115c9b;
+    height: 40px;
+}
+
+.main-footer {
+    background: #1f76bd;
+    color: #fff;
+}
+
+.main-footer p {
+    font-size: 15px;
+    color: black;
+}
+
+.main-footer .footer-main {
+    padding: 30px 0;
+}
+
+.main-footer .footer-title {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.main-footer .footer-title .title-under {
+    background: #fff;
+    margin: 15px 0;
+
+}
+
+.main-footer .footer-title .title-under:after {
+    margin: 0;
+    background: #fff;
+}
+
+.main-footer .footer-content {
+    text-align: justify;
+    font-size: 13px;
+}
+
+.main-footer .tweet {
+    font-size: 13px;
+}
+
+.main-footer .tweet:after {
+    content: "";
+    height: 1px;
+    display: block;
+    background: #115c9b;
+    width: 150px;
+    margin: 15px auto;
+}
+
+.main-footer .tweet:last-child:after {
+    display: none;
+}
+
+.footer-bottom {
+    background: #115c9b;
+    padding: 3px;
+}
+
+.footer-form .form-group {
+    margin-bottom: 5px;
+}
+
+.footer-form .form-control {
+    background: #115c9b;
+    color: #fff;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 5px;
+    border: 1px solid #fff;
+    resize: none;
+}
+
+.footer-form .btn-submit {
+    border-radius: 0;
+    background: #115c9b;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    -moz-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    -webkit-transition: all, 0.5s;
+    transition: all, 0.5s;
+}
+
+.footer-form .btn-submit:hover {
+    background: #fff;
+}
+
+.footer-form input:-moz-placeholder,
+.footer-form textarea:-moz-placeholder {
+    color: #fff;
+}
+
+.footer-form input::-moz-placeholder,
+.footer-form textarea::-moz-placeholder {
+    color: #fff;
+}
+
+.footer-form input:-ms-input-placeholder,
+.footer-form textarea:-ms-input-placeholder {
+    color: #fff;
+}
+
+.footer-form input::-webkit-input-placeholder,
+.footer-form textarea::-webkit-input-placeholder {
+    color: #fff;
+}
+
+/* Ultimate Drop Down v1.0
+Project URL: http://www.dynamicdrive.com/style/csslibrary/item/ultimate_drop_down/
+*/
+
+.ultimatedropdown {
+    font: bold 16px 'Bitter', sans-serif;
+    background: #0066CC;
+    position: relative;
+    width: 100%;
+}
+
+/* Top Level Menu */
+.ultimatedropdown ul {
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    list-style: none;
+    right: -80px;
+}
+
+/* Top level list items */
+.ultimatedropdown ul li {
+    position: relative;
+    display: inline;
+    float: left;
+}
+
+/* Top level menu items link style */
+.ultimatedropdown ul li a, .ultimatedropdown ul li span {
+    display: block;
+    position: relative;
+    /* background of menu items (default state) */
+    background: #0066CC;
+    color: white;
+    padding: 14px 10px;
+    border-right: 1px solid #0066CC;
+    color: #0066CC;
+    text-decoration: none;
+}
+
+.ultimatedropdown ul li a:link, .ultimatedropdown ul li a:visited {
+    color: white;
+}
+
+/* Top level menu items link style on hover and when active */
+.ultimatedropdown ul li:hover > a {
+    background: #0066CC;
+}
+
+/* Sub ULs style */
+.ultimatedropdown ul li ul {
+    position: absolute;
+    left: -5000px;
+    top: auto;
+    opacity: 0;
+    width: 170px;
+    visibility: hidden;
+    box-shadow: 2px 2px 5px gray;
+    -webkit-transition: opacity .3s, visibility 0s .3s, left 0s .3s;
+    transition: opacity .3s, visibility 0s .3s, left 0s .3s;
+}
+
+/* First Sub Levels UL style on hover */
+.ultimatedropdown ul li:hover > ul {
+    visibility: visible;
+    left: 0;
+    opacity: 1;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+/* Sub level Menu list items (alters style from Top level List Items) */
+.ultimatedropdown ul li ul li {
+    display: list-item;
+    float: none;
+}
+
+/* 2nd and beyond Sub Levels vertical offset after 1st level sub menu */
+.ultimatedropdown ul li ul li ul {
+    top: 0;
+    left: 100%;
+}
+
+/* Sub Levels link style on hover and when active */
+.ultimatedropdown ul ul li:hover > a {
+    background: #0066CC;
+}
+
+/* Sub Levels UL style on hover */
+.ultimatedropdown ul ul li:hover > ul {
+    left: 100%;
+}
+
+/* Sub level menu links style */
+.ultimatedropdown ul li ul li a {
+    font: normal 14px 'Bitter', sans-serif;
+    padding: 10px;
+    margin: 0;
+    background: #0066CC;
+    border-right: none;
+    border-top-width: 0;
+    border-bottom: 1px solid #0066CC;
+}
+
+/* LIs with a sub UL style */
+.ultimatedropdown ul li > a {
+    /* add padding to accomodate arrow inside LIs */
+    padding-right: 25px;
+}
+
+/* LIs with NO sub UL style */
+.ultimatedropdown ul li > a:only-child {
+    /* undo padding for non submenu LIs */
+    padding-right: 10px;
+}
+
+/* LIs with a sub UL pseudo class */
+.ultimatedropdown ul li > a:after {
+    /* add arrow inside LIs */
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: 5px solid transparent;
+    border-top-color: #0066CC;
+    top: 50%;
+    right: 8px;
+}
+
+/* LIs with NO sub UL pseudo class */
+.ultimatedropdown ul li > a:only-child:after {
+    /* undo arrow for non submenu LIs */
+    display: none;
+}
+
+/* Sub ULs' LIs with a sub UL pseudo class */
+.ultimatedropdown ul li ul li > a:after {
+    /* change arrow to right arrow inside sub UL LIs */
+    border-top-color: #0066CC;
+    border-left-color: #0066CC;
+    top: 40%;
+    right: 8px;
+}
+
+/* ####### responsive layout CSS ####### */
+
+@media (max-width: 800px) {
+    /* FIRST breaking point
+      Last two top menu items' sub ULs should drop to the left (instead of right)
+      Change 2 to a different number to exclude/include more top menu items based on menu and max-width setting above
+    */
+    .ultimatedropdown ul li:nth-last-of-type(-n+2) ul li:hover > ul {
+        left: -100%;
+    }
+}
+
+@media (max-width: 500px) {
+    /* SECOND breaking point
+      For mobile and screen browser windows
+      Get Sub ULs to expand entire width of document and drop down
+      Changes menu reveal type from "visibility" to "display" to overcome bug. See comments below
+    */
+    .ultimatedropdown ul li {
+        position: static;
+    }
+
+    .ultimatedropdown ul li ul {
+        width: 100%;
+        border-top: 2px solid #0066CC;
+        /* change menu reveal type from "visibility" to "display". Former seems to cause browser to jump to top of page sometimes when menu header is tapped on */
+        display: none;
+    }
+
+    .ultimatedropdown ul li:hover > ul {
+        display: block;
+        left: 0 !important;
+        top: auto;
+    }
+
+    .ultimatedropdown ul ul li:hover > ul {
+        left: 0 !important;
+        top: auto;
+    }
+}
