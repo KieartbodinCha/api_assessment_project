@@ -1,36 +1,33 @@
 <?php
 /**
  * Created by IntelliJ IDEA.
- * User: kiear
- * Date: 4/25/2017
- * Time: 9:02 PM
+ * User: kieartbodin
+ * Date: 9/14/2017 AD
+ * Time: 10:17 AM
  */
 
 require_once '../db/DB_Functions.php';
 
 $db = new DB_Functions();
-
-
-if (isset($_REQUEST['data'])) {
+if ($_REQUEST != null) {
     $data = $_POST["data"];
     try {
-        $outcome = $db->storeData($data);
+        $provinces = $db->getAllProvince();
         $response['success'] = TRUE;
         $response['message'] = 'Success!';
+        $response['data'] = $provinces;
     } catch (Exception $exception) {
         $response['success'] = FALSE;
         $response['message'] = $exception;
+        $response['data'] = null;
     }
     echo json_encode($response);
 } else {
     echo 'Api Available';
     try {
-        $img = $db->testImage();
-        echo '<br/>';
-        echo '<img src="data:image/png;base64,' . $img . '" />';
+        $provinces = $db->getAllProvince();
+        echo json_encode($provinces);
     } catch (Exception $exception) {
         echo $exception;
     }
 }
-
-?>

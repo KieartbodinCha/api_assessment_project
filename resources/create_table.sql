@@ -17,7 +17,7 @@ CREATE TABLE `school` (
  `schDistric` varchar(255) DEFAULT NULL,
  `schProvince` varchar(255) DEFAULT NULL,
  PRIMARY KEY (`schId`)
-) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8;
 
 
 
@@ -84,11 +84,11 @@ CREATE TABLE `schtest` (
  `com29` varchar(45) DEFAULT NULL,
  `com30` varchar(45) DEFAULT NULL,
  `school_schId` int(255) NOT NULL,
- `img1` longblob,
- `img2` longblob,
- `img3` longblob,
- `img4` longblob,
+ `img1` LONGTEXT,
+ `img2` LONGTEXT,
+ `img3` LONGTEXT,
+ `img4` LONGTEXT,
  PRIMARY KEY (`idschtest`),
  KEY `fk_schtest_school1_idx` (`school_schId`),
  CONSTRAINT `fk_schtest_school1` FOREIGN KEY (`school_schId`) REFERENCES `school` (`schId`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
