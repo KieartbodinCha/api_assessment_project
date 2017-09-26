@@ -1,6 +1,7 @@
 <?php
 mb_internal_encoding('utf-8');
 ini_set('default_charset', 'utf-8');
+
 /**
  * Created by IntelliJ IDEA.
  * User: kiear
@@ -23,15 +24,6 @@ class DB_Functions
 
     }
 
-    public function getLatestSchoolID()
-    {
-        $idQuery = " SELECT MAX(schId) AS SCHOOL_ID FROM school ";
-        $idResult = mysqli_query($this->conn, $idQuery);
-        $idRow = mysqli_fetch_assoc($idResult);
-        $schoolId = $idRow["SCHOOL_ID"];
-        return $schoolId;
-    }
-
     public function getLatestSchoolTestID()
     {
         $idQuery = " SELECT MAX(schId) AS SCHOOL_ID FROM school ";
@@ -51,7 +43,6 @@ class DB_Functions
         } catch (Exception $exception) {
             return $exception;
         }
-        return $this->selectAllData();
     }
 
     public function insertSchool($school)
@@ -170,6 +161,7 @@ class DB_Functions
             $comment28 = $school["COMMENT28"];
             $comment29 = $school["COMMENT29"];
             $comment30 = $school["COMMENT30"];
+            $result = $school["RESULT"];
 
             $image1 = ($school["IMAGE1_BASE64"]);
             $image2 = ($school["IMAGE2_BASE64"]);
@@ -183,7 +175,7 @@ class DB_Functions
                                     com1, com2, com3, com4, com5, com6, com7, com8, com9, com10, 
                                     com11, com12, com13, com14, com15, com16, com17, com18, com19, 
                                     com20, com21, com22, com23, com24, com25, com26, com27, com28, com29, com30, 
-                                    school_schId, img1, img2, img3, img4) 
+                                    school_schId, img1, img2, img3, img4, result) 
                                     VALUES (    
                                     ?,?,?,?,?,?,?,?,?,?,
                                     ?,?,?,?,?,?,?,?,?,?,
@@ -191,11 +183,11 @@ class DB_Functions
                                     ?,?,?,?,?,?,?,?,?,?,
                                     ?,?,?,?,?,?,?,?,?,?,
                                     ?,?,?,?,?,?,?,?,?,?,
-                                    ?,?,?,?,?) ";
+                                    ?,?,?,?,?,?) ";
 
             $prepareStatement = $this->conn->prepare($sqlInsertTest);
             if ($prepareStatement == TRUE) {
-                $prepareStatement->bind_param("ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssissss",
+                $prepareStatement->bind_param("ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssisssss",
                     $choice1,
                     $choice2,
                     $choice3,
@@ -256,7 +248,8 @@ class DB_Functions
                     $comment28,
                     $comment29,
                     $comment30,
-                    $schoolID, $image1, $image2, $image3, $image4);
+                    $schoolID, $image1, $image2, $image3, $image4,
+                    $result);
             }
 
             $prepareStatement->execute();
@@ -266,6 +259,15 @@ class DB_Functions
         } finally {
             $prepareStatement->close();
         }
+    }
+
+    public function getLatestSchoolID()
+    {
+        $idQuery = " SELECT MAX(schId) AS SCHOOL_ID FROM school ";
+        $idResult = mysqli_query($this->conn, $idQuery);
+        $idRow = mysqli_fetch_assoc($idResult);
+        $schoolId = $idRow["SCHOOL_ID"];
+        return $schoolId;
     }
 
     public function getAllProvince()
