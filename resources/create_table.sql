@@ -1,3 +1,7 @@
+DROP TABLE IF EXISTS `schtest`;
+DROP TABLE IF EXISTS `school`;
+
+
 CREATE TABLE `school` (
   `schId`          INT(255) NOT NULL AUTO_INCREMENT,
   `schName`        VARCHAR(255)      DEFAULT NULL,
@@ -21,8 +25,6 @@ CREATE TABLE `school` (
   ENGINE = InnoDB
   AUTO_INCREMENT = 110
   DEFAULT CHARSET = utf8;
-
-
 CREATE TABLE `schtest` (
   `idschtest`    INT(255) NOT NULL AUTO_INCREMENT,
   `ex1`          VARCHAR(255)      DEFAULT NULL,
@@ -90,9 +92,9 @@ CREATE TABLE `schtest` (
   `img2`         LONGTEXT,
   `img3`         LONGTEXT,
   `img4`         LONGTEXT,
-  'result'       VARCHAR(255)      DEFAULT NULL,
+  `result`       VARCHAR(255)      DEFAULT NULL,
   PRIMARY KEY (`idschtest`),
-  KEY `fk_schtest_school1_idx` (`school_schId`),
+  KEY `fk_schtest_school1_idx`(`school_schId`),
   CONSTRAINT `fk_schtest_school1` FOREIGN KEY (`school_schId`) REFERENCES `school` (`schId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
